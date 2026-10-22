@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Grammar Complete Summary</title>
+  <style>
+    :root {
+      --bg-1: #07111d;
+      --bg-2: #0d1728;
+      --bg-3: #12213a;
+      --panel: rgba(17, 24, 39, 0.9);
+      --line: rgba(148, 163, 184, 0.2);
+      --text: #edf7ff;
+      --muted: #bad1e6;
+      --primary: #7dd3fc;
+      --primary-2: #8b5cf6;
+      --gold: #fbbf24;
+      --green: #34d399;
+      --red: #f87171;
+      --shadow: 0 24px 60px rgba(0,0,0,0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(125,211,252,0.14), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(139,92,246,0.14), transparent 28%),
+        linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 40%, var(--bg-3) 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: 42px auto;
+    }
+
+    .hero {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      background: rgba(125,211,252,0.1);
+      border: 1px solid rgba(125,211,252,0.2);
+      color: var(--text);
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      letter-spacing: -0.06em;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #edf7ff, #d8cbff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 840px;
+      font-size: 1rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 16px;
+      min-height: 110px;
+    }
+
+    .stat .label {
+      color: var(--primary);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .stat h3 {
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+    }
+
+    .stat p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    section {
+      margin-top: 26px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px 22px 18px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 16px;
+    }
+
+    .card h3 {
+      font-size: 1.08rem;
+      margin-bottom: 10px;
+      color: #edf7ff;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 0.96rem;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+    }
+
+    .formula-box {
+      background: rgba(125,211,252,0.08);
+      border: 1px solid rgba(125,211,252,0.18);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-top: 10px;
+      line-height: 1.8;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      font-size: 0.94rem;
+      vertical-align: top;
+    }
+
+    th {
+      background: rgba(125,211,252,0.08);
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      margin: 28px 0 10px;
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 900px) {
+      .stats, .cards, .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 22px, 1180px);
+      }
+
+      .hero, section {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="hero-top">
+        <div class="badge">English Grammar</div>
+      </div>
+
+      <h1>English Grammar Complete Summary</h1>
+      <p class="subtitle">
+        English grammar is the system of rules that helps us form correct sentences, communicate clearly,
+        and express ideas accurately. It includes parts of speech, sentence structure, tenses, punctuation,
+        voice, narration, and correct usage of articles, pronouns, modifiers, and conjunctions.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="label">Parts of Speech</div>
+          <h3>Nouns, Verbs, Adjectives</h3>
+          <p>Words are classified based on their function in a sentence.</p>
+        </div>
+
+        <div class="stat">
+          <div class="label">Tenses</div>
+          <h3>Past, Present, Future</h3>
+          <p>Verb forms show when an action happens.</p>
+        </div>
+
+        <div class="stat">
+          <div class="label">Sentence</div>
+          <h3>Subject + Predicate</h3>
+          <p>Every sentence should have a subject and a meaningful verb.</p>
+        </div>
+
+        <div class="stat">
+          <div class="label">Usage</div>
+          <h3>Articles & Modifiers</h3>
+          <p>Correct grammar uses articles, pronouns, and adjectives appropriately.</p>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <h2>1. Parts of Speech</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Noun</h3>
+          <p>A noun names a person, place, thing, animal, or idea.</p>
+          <ul>
+            <li>Rahul</li>
+            <li>Delhi</li>
+            <li>book</li>
+            <li>happiness</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Pronoun</h3>
+          <p>A pronoun replaces a noun.</p>
+          <ul>
+            <li>he, she, it, they, we, I</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Verb</h3>
+          <p>A verb shows action, state, or occurrence.</p>
+          <ul>
+            <li>run, write, is, think, dance</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Adjective</h3>
+          <p>An adjective describes a noun or pronoun.</p>
+          <ul>
+            <li>happy child</li>
+            <li>blue sky</li>
+            <li>tall building</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Adverb</h3>
+          <p>An adverb describes a verb, adjective, or another adverb.</p>
+          <ul>
+            <li>quickly, very, happily, often</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Preposition</h3>
+          <p>A preposition shows relationship between words.</p>
+          <ul>
+            <li>in, on, at, under, behind, with</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Conjunction</h3>
+          <p>A conjunction joins words, phrases, or clauses.</p>
+          <ul>
+            <li>and, but, or, because, although</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Interjection</h3>
+          <p>An interjection expresses sudden emotion.</p>
+          <ul>
+            <li>Wow! Oh! Alas!</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Article</h3>
+          <p>Articles define whether a noun is specific or general.</p>
+          <ul>
+            <li>a, an, the</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Sentence Structure</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Simple Sentence</h3>
+          <p>Contains one independent clause.</p>
+          <div class="formula-box">She reads a book.</div>
+        </div>
+
+        <div class="card">
+          <h3>Compound Sentence</h3>
+          <p>Contains two or more independent clauses joined by conjunctions.</p>
+          <div class="formula-box">She reads a book, and he writes an essay.</div>
+        </div>
+
+        <div class="card">
+          <h3>Complex Sentence</h3>
+          <p>Contains one independent clause and one or more dependent clauses.</p>
+          <div class="formula-box">When it rains, we stay indoors.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Subject and Predicate</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Subject</h3>
+          <p>The subject is the person, place, or thing about which something is said.</p>
+          <div class="formula-box">The dog barked loudly.</div>
+          <p class="small-note">Subject: The dog</p>
+        </div>
+
+        <div class="card">
+          <h3>Predicate</h3>
+          <p>The predicate tells what the subject does or is.</p>
+          <div class="formula-box">The dog barked loudly.</div>
+          <p class="small-note">Predicate: barked loudly</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Articles</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Indefinite Articles</h3>
+          <p>Used for non-specific nouns.</p>
+          <div class="formula-box">a book, an apple</div>
+        </div>
+
+        <div class="card">
+          <h3>Definite Article</h3>
+          <p>Used for specific nouns known to the reader.</p>
+          <div class="formula-box">the book, the sun</div>
+        </div>
+
+        <div class="card">
+          <h3>Zero Article</h3>
+          <p>No article is used in certain cases like plural general nouns.</p>
+          <div class="formula-box">Books are useful.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Tenses</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tense</th>
+            <th>Use</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Simple Present</td>
+            <td>Routine / facts</td>
+            <td>She writes everyday.</td>
+          </tr>
+          <tr>
+            <td>Present Continuous</td>
+            <td>Action happening now</td>
+            <td>She is writing now.</td>
+          </tr>
+          <tr>
+            <td>Present Perfect</td>
+            <td>Action completed recently / experience</td>
+            <td>She has written the letter.</td>
+          </tr>
+          <tr>
+            <td>Present Perfect Continuous</td>
+            <td>Action started in the past and continues</td>
+            <td>She has been writing since morning.</td>
+          </tr>
+          <tr>
+            <td>Simple Past</td>
+            <td>Finished action in the past</td>
+            <td>She wrote a letter yesterday.</td>
+          </tr>
+          <tr>
+            <td>Past Continuous</td>
+            <td>Ongoing action in past</td>
+            <td>She was writing when I arrived.</td>
+          </tr>
+          <tr>
+            <td>Past Perfect</td>
+            <td>Action before another past action</td>
+            <td>She had written the letter before he came.</td>
+          </tr>
+          <tr>
+            <td>Simple Future</td>
+            <td>Upcoming action</td>
+            <td>She will write a letter.</td>
+          </tr>
+          <tr>
+            <td>Future Continuous</td>
+            <td>Action ongoing in future</td>
+            <td>She will be writing at 8 pm.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>6. Active and Passive Voice</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Active Voice</h3>
+          <p>The subject does the action.</p>
+          <div class="formula-box">Riya writes a poem.</div>
+        </div>
+
+        <div class="card">
+          <h3>Passive Voice</h3>
+          <p>The object receives the action.</p>
+          <div class="formula-box">A poem is written by Riya.</div>
+        </div>
+
+        <div class="card">
+          <h3>Rule</h3>
+          <p>Passive voice is formed with be + past participle.</p>
+          <div class="formula-box">Object + be + V3 + by + Subject</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. Direct and Indirect Speech</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Direct Speech</h3>
+          <p>Exact words spoken by the speaker.</p>
+          <div class="formula-box">He said, “I am late.”</div>
+        </div>
+
+        <div class="card">
+          <h3>Indirect Speech</h3>
+          <p>Reported words without using quotation marks.</p>
+          <div class="formula-box">He said that he was late.</div>
+        </div>
+
+        <div class="card">
+          <h3>Key Changes</h3>
+          <ul>
+            <li>Pronouns change</li>
+            <li>Tense usually shifts back</li>
+            <li>Time words may change</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>8. Modals</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Can / Could</h3>
+          <p>Ability / permission / possibility</p>
+          <div class="formula-box">I can swim.</div>
+        </div>
+
+        <div class="card">
+          <h3>May / Might</h3>
+          <p>Possibility</p>
+          <div class="formula-box">It may rain.</div>
+        </div>
+
+        <div class="card">
+          <h3>Should / Must</h3>
+          <p>Advice / obligation</p>
+          <div class="formula-box">You must complete the task.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>9. Prepositions and Conjunctions</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Prepositions</h3>
+          <p>Show time, place, direction, or relationship.</p>
+          <div class="formula-box">in the room, on the table, at 9 o’clock</div>
+        </div>
+
+        <div class="card">
+          <h3>Conjunctions</h3>
+          <p>Join words, phrases, or clauses.</p>
+          <div class="formula-box">and, but, although, because, if, while</div>
+        </div>
+
+        <div class="card">
+          <h3>Examples</h3>
+          <div class="formula-box">She came before I left.<br>I stayed because it was raining.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>10. Subject-Verb Agreement</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Rule</h3>
+          <p>The verb must agree with the subject in number and person.</p>
+          <div class="formula-box">He writes.<br>They write.</div>
+        </div>
+
+        <div class="card">
+          <h3>Singular Subject</h3>
+          <p>Use singular verb forms.</p>
+          <div class="formula-box">The boy runs.</div>
+        </div>
+
+        <div class="card">
+          <h3>Plural Subject</h3>
+          <p>Use plural verb forms.</p>
+          <div class="formula-box">The boys run.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>11. Question Tags</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Rule</h3>
+          <p>Question tags repeat the auxiliary verb or do/did/does.</p>
+          <div class="formula-box">You are late, aren’t you?</div>
+        </div>
+
+        <div class="card">
+          <h3>Examples</h3>
+          <div class="formula-box">She can swim, can’t she?<br>They are playing, aren’t they?</div>
+        </div>
+
+        <div class="card">
+          <h3>Positive / Negative</h3>
+          <p>If the sentence is positive, the tag is usually negative.</p>
+          <div class="formula-box">He is tall, isn’t he?</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>12. Punctuation Rules</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Full Stop</h3>
+          <p>Used at the end of a sentence.</p>
+          <div class="formula-box">I am learning English.</div>
+        </div>
+
+        <div class="card">
+          <h3>Comma</h3>
+          <p>Used to separate items, clauses, or phrases.</p>
+          <div class="formula-box">We bought apples, oranges, and mangoes.</div>
+        </div>
+
+        <div class="card">
+          <h3>Question Mark</h3>
+          <p>Used at the end of a question.</p>
+          <div class="formula-box">Where are you going?</div>
+        </div>
+
+        <div class="card">
+          <h3>Exclamation Mark</h3>
+          <p>Used to show strong emotion.</p>
+          <div class="formula-box">Wow! What a beautiful view!</div>
+        </div>
+
+        <div class="card">
+          <h3>Colon</h3>
+          <p>Used before a list or explanation.</p>
+          <div class="formula-box">You need three things: pen, notebook, and book.</div>
+        </div>
+
+        <div class="card">
+          <h3>Semicolon</h3>
+          <p>Used to link closely related independent clauses.</p>
+          <div class="formula-box">I was tired; I still finished my work.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>13. Degrees of Comparison</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Positive</h3>
+          <div class="formula-box">This book is good.</div>
+        </div>
+
+        <div class="card">
+          <h3>Comparative</h3>
+          <div class="formula-box">This book is better than that one.</div>
+        </div>
+
+        <div class="card">
+          <h3>Superlative</h3>
+          <div class="formula-box">This is the best book in the library.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>14. Transformation of Sentences</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Affirmative to Negative</h3>
+          <div class="formula-box">She is happy. → She is not unhappy.</div>
+        </div>
+
+        <div class="card">
+          <h3>Assertive to Interrogative</h3>
+          <div class="formula-box">He is coming. → Is he coming?</div>
+        </div>
+
+        <div class="card">
+          <h3>Exclamatory to Assertive</h3>
+          <div class="formula-box">What a beautiful flower! → It is a beautiful flower.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>15. Common Errors</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Subject-Verb Agreement</h3>
+          <p>Incorrect: The students was late.<br>Correct: The students were late.</p>
+        </div>
+
+        <div class="card">
+          <h3>Article Mistakes</h3>
+          <p>Incorrect: She is a honest girl.<br>Correct: She is an honest girl.</p>
+        </div>
+
+        <div class="card">
+          <h3>Preposition Mistakes</h3>
+          <p>Incorrect: She is good in English.<br>Correct: She is good at English.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>16. Grammar Rules in One Line</h2>
+      <div class="formula-box">
+        A sentence must have a subject and a predicate.<br>
+        The verb must agree with the subject.<br>
+        Articles, pronouns, verbs, and prepositions must be used correctly.<br>
+        Tenses show the time of action.<br>
+        Punctuation helps the sentence become clear and correct.
+      </div>
+    </section>
+
+    <div class="footer">
+      English Grammar Summary Page
+    </div>
+  </div>
+</body>
+</html>
